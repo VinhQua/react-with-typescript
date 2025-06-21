@@ -8,6 +8,13 @@ const Component = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
+    console.log(formData.get("text") as string); // Accessing the text input value
+    const person = {
+      name: data.text as string,
+      email: data.email as string,
+    };
   };
 
   return (
