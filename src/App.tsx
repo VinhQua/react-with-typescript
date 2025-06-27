@@ -1,5 +1,5 @@
 import "./App.css";
-import Component from "./06-context";
+import Component from "./07-reducer";
 function App() {
   return (
     <main>
